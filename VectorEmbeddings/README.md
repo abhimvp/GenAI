@@ -55,3 +55,21 @@
 - primary applications of vector embeddings:
   ![alt text](Images/image-18.png)
 - Main take away is that core advantage of vector embeddings is that they provide a way to transfer complex multi-dimensional and often discrete data into a lower dimension continous space that captures semantic or structural relationships within the original data
+
+## How do we generate One?
+
+- In the Yt video they have used open ai and i will use Gemini to create embeddings -> https://ai.google.dev/gemini-api/docs/embeddings  - reference the docs always
+- Install `pip install -q -U google-generativeai`
+- python gemini_embedding.py gives us this:
+
+```
+python gemini_embeddings.py
+[-0.050031602, -0.011258341, -0.079504654, -0.044635713, 0.013885757, 0.021160536, -0.012289658, -0.0238951, -0.010466241, 0.03615093, -0.010492937, -0.0037765617, 0.005042418, 0.008511208, -0.020700559, -0.015004925, -0.04341232, 0.029564794, -0.03199586, 0.016428895, -0.0078102355, 0.013075797, -0.024971409, 0.05849284, -0.014690404, -0.0044325925, 0.024593137, 0.026113575, 0.011644063, -0.018286578, -0.07106492, 0.040655807, -0.012871769, 0.045654282, 0.030543208, -0.044891044, -0.065672785, 0.032400224, 0.02822351, -0.097731695, -0.03839391, 0.02840921, -0.05184262, 0.025301566, 0.0031810435, -0.031728506, 0.011952043, -0.04773199, 0.04035022, 0.037007906, 0.032130603, -0.05263041, -0.030461213, 0.008568156, -0.056618176, -0.050080813, -0.027624521, -0.0057144663, 0.043062862, 0.002130037, -0.04626577, -0.014578827, 0.010504269, -0.03203156, -0.00439502, -0.07138581, -0.08438585, -0.009267279, -0.029819107, 0.070514075, 0.002540844, -0.018777287, -0.034360163, -0.022325676, 0.021852903, 0.0041984557, 0.016614089, -0.02160189, 0.019912638, 0.043609, 0.007045673, 0.0073081506, 0.07495029, 0.015926462, -0.006389848, -0.03676823, 0.030728174,
+....
+....
+....
+....]
+```
+
+- Text Embeddings is an updated version of the Embedding model that offers elastic embedding sizes under 768 dimensions. Elastic embeddings generate smaller output dimensions and potentially save computing and storage costs with minor performance loss.
+- embedcontent api reference : https://ai.google.dev/api/embeddings#method:-models.embedcontent
