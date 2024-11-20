@@ -42,3 +42,16 @@ Repo on GenAI Knowledge Base and practice projects
 - We get a link : the iam user to login from now on & username and password & download it as csv file
 - Paste URL into browser and we use sign-in page and our accountID populates as well & paste the username & password & click on remember this account
 - Then it asks to change your password - give the old passowrd from csv and give it your own password matching the amazon policy for it to accept and click on confirm password change
+
+# Vector Embeddings Tutorial - Code Your own AI Assistant
+
+- Learning from freeCodeCamp.org YT - [Vector Embeddings Tutorial – Code Your Own AI Assistant with GPT-4 API + LangChain + NLP](https://youtu.be/yfHHvmaMkcA?si=yHEMcKt9Ry-GNlzs)
+
+- Learn about vector embeddings which transforms rich data like words or images into numerical vectors that capture their essence.
+- This course will make us understand the significance of text embeddings howcase their diverse applications & guide us through generating our own AI & delve into integrating vectors with databases by the end you'll be equipped to build an AI assistant using these powerful representations
+- We will understand:
+  - What Vector Embeddings are?
+  - How they are generated &
+  - Understand why we even care about them? & how they're used
+  - why companies might want to store vector embeddings in a database & see how we can store them in our own database
+  - Langchain which will help us with the next part of making an AI assistant in python
