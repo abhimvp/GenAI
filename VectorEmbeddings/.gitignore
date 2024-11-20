@@ -1,2 +1,5 @@
 .env
 env
+vcpkg
+secure-connect-vector-database.zip
+.venv

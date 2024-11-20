@@ -58,7 +58,7 @@
 
 ## How do we generate One?
 
-- In the Yt video they have used open ai and i will use Gemini to create embeddings -> https://ai.google.dev/gemini-api/docs/embeddings  - reference the docs always
+- In the Yt video they have used open ai and i will use Gemini to create embeddings -> https://ai.google.dev/gemini-api/docs/embeddings - reference the docs always
 - Install `pip install -q -U google-generativeai`
 - python gemini_embedding.py gives us this:
 
@@ -73,3 +73,31 @@ python gemini_embeddings.py
 
 - Text Embeddings is an updated version of the Embedding model that offers elastic embedding sizes under 768 dimensions. Elastic embeddings generate smaller output dimensions and potentially save computing and storage costs with minor performance loss.
 - embedcontent api reference : https://ai.google.dev/api/embeddings#method:-models.embedcontent
+
+## vectors and databases
+
+- FOr the AI models the ability to take large amount of data - contexualize it process it and enable it to be searched with meaning.
+- Generative AI processes and applications that are being built to natively incorporate generative AI functionality or rely on the ability to access vector embeddings a data type that provides a semantics neccessary for AI to have a similar long term memory processing to what we have allowing it to draw on and record information for complex task execution.
+- Now we know vector embeddings are data representation that AI models such as LLM use and generate to make complex decisions and like memories in human brain there is complexity , dimension , pattern and relationships that all need to be stored and represented as part of the underlying structures which make all of this difficult to manage , that is why for AI workloads we need a purpose built database or brain - designed for highly scalable access and especially built for storing and accessing these vector embeddings .
+- vector databases like datastacks astradb built on apache cassandra are designed to provide optimized storage and data access capabilities specifically for embeddings
+
+### setup db:
+- go to https://astra.datastax.com/
+- create database - select vector database - name: vector_database and create database it takes some time to initiliaze it
+- database created & we will connect to it from external source and in order to that we need to get our token  , go to connnect tab and click on generate token and copy it to our env variables
+
+
+### Let's talk about langchain
+- An open source framework that allows AI developers to have better interactions with several large language models (LLM)
+- It allows developers to create chains which are logical links between one or more llms and you can use it to load documents such as pdfs or csvs for example 
+- https://python.langchain.com/api_reference/ and https://python.langchain.com/api_reference/astradb/index.html
+
+## build AI Assistant
+- that helps us search for similar text in a dataset
+- get some data -> break it up into little chunks and save it in a database in order for us to essentially perform vector search on it
+- mini-qa.py
+- pip install cassio datasets langchain tiktoken
+- pip install -U langchain-google-genai
+- pip install -qU langchain-astradb
+- https://python.langchain.com/api_reference/astradb/vectorstores/langchain_astradb.vectorstores.AstraDBVectorStore.html#langchain_astradb.vectorstores.AstraDBVectorStore
+- Astra DB is the only vector database that can make vector updates immediately available to applications and scale to the largest real-time data and streaming workloads, securely on AWS
