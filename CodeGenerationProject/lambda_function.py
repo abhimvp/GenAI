@@ -90,4 +90,4 @@ def lambda_handler(event, context):
     else:
         print("No code was generated")
 
-    return {"statusCode": 200, "body": json.dumps("Code generation ")}
+    return {"statusCode": 200, "body": json.dumps("Code generation complete")}
